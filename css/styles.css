@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Press Start 2P', cursive;
+  background-color: #1e1e1e;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.containerJogo {
+  display: grid;
+  grid-template-columns: repeat(13, 50px);
+  grid-template-rows: repeat(13, 50px);
+  gap: 1px;
+  background-color: #111;
+  border: 4px solid #fff;
+}
+
+.containerJogo div {
+  width: 50px;
+  height: 50px;
+}
+
+.carro {
+  background-image: url("../assets/img/carro.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.tronco {
+  background-image: url("../assets/img/tronco.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+}
+
+.chao {
+  background-image: url("../assets/img/chao.jpeg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.agua {
+  background-image: url("../assets/img/agua.jpeg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.seguro {
+  background-color: #4caf50;
+}
+
+.frogger {
+  background-image: url('../assets/img/frogger.png');   
+  background-size: contain;  
+  background-repeat: no-repeat;
+  background-position: center; 
+  width: 50px; 
+  height: 50px; 
+}
+
+.tronco-div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../assets/img/tronco.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  pointer-events: none; 
+  z-index: 2;
+}
+
+
+.celula {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+.toca { background: gold; }
+.ocupada { background: darkgoldenrod; }
+
+#hud {
+  font-family: 'Press Start 2P', monospace;
+  margin-bottom: 10px;
+}
