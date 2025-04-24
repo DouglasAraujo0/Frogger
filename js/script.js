@@ -35,3 +35,15 @@ function criarGrid() {
   }
   console.log(celulas)
 }
+
+function atualizarHUD() {
+    let hud = document.getElementById('hud');
+    if (!hud) {
+      hud = document.createElement('div');
+      hud.id = 'hud';
+      hud.innerHTML = `<span id="pontuacao"></span> <span id="vidas"></span>`;
+      document.body.prepend(hud);
+    }
+    document.getElementById('pontuacao').textContent = `Pontos: ${pontos}`;
+    document.getElementById('vidas').textContent = `Vidas: ${vidas}`;
+  }
